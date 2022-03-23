@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import TableTemplate from './TableTemplate';
 
 const LandingPage = () => {
     const [data, setData] = useState([]);
@@ -15,8 +16,8 @@ const LandingPage = () => {
 
     return(
         <div>
-            Landing Page placeholder
             {console.log("Data: ", data)}
+            <TableTemplate data={data}/>
         </div>
     );
 }
