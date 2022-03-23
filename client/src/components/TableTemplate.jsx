@@ -1,4 +1,5 @@
 import React from 'react';
+import Table from 'react-bootstrap/Table';
 
 const TableTemplate = (props) => {
 
@@ -21,22 +22,24 @@ const TableTemplate = (props) => {
     };
 
     return (
-        <div>
-            <table>
-                <tr>
-                    <th>Department Family</th>
-                    <th>Entity</th>
-                    <th>Date</th>
-                    <th>Expense Type</th>
-                    <th>Expense Area</th>
-                    <th>Supplier</th>
-                    <th>Transaction Number</th>
-                    <th>Amount</th>
-                    <th>Invoice Currency Unit</th>
-                </tr>
-                {showData(props)}
-            </table>
-        </div>
+            <Table responsive="sm" striped bordered hover >
+                <thead>
+                    <tr>
+                        <th>Department Family</th>
+                        <th>Entity</th>
+                        <th>Date</th>
+                        <th>Expense Type</th>
+                        <th>Expense Area</th>
+                        <th>Supplier</th>
+                        <th>Transaction Number</th>
+                        <th>Amount</th>
+                        <th>Invoice Currency Unit</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {showData(props)}
+                </tbody>
+            </Table>
     );
 }
 
