@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import TableTemplate from './TableTemplate';
+import { Container, Row, Col } from 'react-bootstrap';
 
 const LandingPage = () => {
     const [data, setData] = useState([]);
@@ -15,10 +16,15 @@ const LandingPage = () => {
     }, []);
 
     return(
-        <div>
-            {console.log("Data: ", data)}
-            <TableTemplate data={data}/>
-        </div>
+        <Container>
+            <Row>
+                <Col>
+                    {console.log("Data: ", data)}
+                    <br/>
+                    <TableTemplate data={data}/>
+                </Col>
+            </Row>
+        </Container>
     );
 }
 

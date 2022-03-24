@@ -22,7 +22,8 @@ const TableTemplate = (props) => {
     };
 
     return (
-            <Table responsive="sm" striped bordered hover >
+        <div style={{overflow: "scroll", height: "90vh"}}>
+            <Table responsive="sm" striped bordered hover>
                 <thead>
                     <tr>
                         <th>Department Family</th>
@@ -40,6 +41,7 @@ const TableTemplate = (props) => {
                     {showData(props)}
                 </tbody>
             </Table>
+        </div>
     );
 }
 
