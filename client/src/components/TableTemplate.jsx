@@ -3,6 +3,10 @@ import Table from 'react-bootstrap/Table';
 
 const TableTemplate = (props) => {
 
+    /*
+        Here is where I use the props variable to access the data passed via the LandingPage component.
+        I can map the data and for every row of data stored, it will return the table rows.
+    */
     const showData = (props) => {
         return props.data.map(data => {
             return(
@@ -21,6 +25,11 @@ const TableTemplate = (props) => {
         });
     };
 
+    /*
+        This return statement returns the harcoded headings of the table.
+        This is followed by the function call to showData which calls the function
+        and renders the rows in the table.
+    */
     return (
         <div style={{overflow: "scroll", height: "80vh"}}>
             <Table responsive="sm" striped bordered hover>

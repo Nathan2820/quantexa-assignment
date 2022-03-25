@@ -28,6 +28,10 @@ const DoughnutChart = (props) => {
     let tsUkData = [];
     let restOfData = [];
 
+    /*
+        the props variable is mapped through and an if else statement is used to push the relevant data
+        into two different arrays for later use.
+    */
     props.data.map(data => {
         if(data.expense_type.includes("T&S UK")) {
             tsUkData.push(data);
@@ -36,6 +40,10 @@ const DoughnutChart = (props) => {
         }
     });
 
+    /*
+        The state object is instantiated with the configuration for the Doughnut chart.
+        The labels are set and the two arrays are passed as the data sources for the doughnut.
+    */
     const state = {
         labels: ['Number of T&S UK Expenses', 'Number of other Expenses'],
         datasets: [{
@@ -48,6 +56,10 @@ const DoughnutChart = (props) => {
         }]
     }
 
+    /*
+        The return statement renders the doughnut component and uses the state object as its
+        data source.
+    */
     return (
         <Container>
             <h3>Number of T&S UK expense types compared to remaining expense types</h3>
