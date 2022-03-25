@@ -1,5 +1,8 @@
 const mysql = require('mysql');
 
+/*
+    mysql database connection information to connect to the mysql server
+*/
 const con = mysql.createConnection({
     host: "localhost",
     user: "root",
@@ -7,6 +10,9 @@ const con = mysql.createConnection({
     database: "quantexa"
 });
 
+/*
+    Query to the database which retrieves all data from the table named "data"
+*/
 const getData = (request, response) => {
     con.query("SELECT * FROM data", (error, results) => {
         if(error) throw error;
