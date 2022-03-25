@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import TableTemplate from './TableTemplate';
 import { Container, Row, Col } from 'react-bootstrap';
+import LineGraph from './LineGraph';
+import DoughnutChart from './DoughnutChart';
 
 const LandingPage = () => {
     const [data, setData] = useState([]);
@@ -17,13 +19,24 @@ const LandingPage = () => {
 
     return(
         <Container>
+            <br/>
+            <h2>Quantexa Assignment - Transaction Visualisation Tool</h2>
             <Row>
                 <Col>
                     {console.log("Data: ", data)}
-                    <br/>
                     <TableTemplate data={data}/>
                 </Col>
             </Row>
+            <br/>
+            <Row>
+                <Col>
+                    <LineGraph data={data}/>
+                </Col>
+                <Col>
+                    <DoughnutChart data={data}/>
+                </Col>
+            </Row>
+            <br/>
         </Container>
     );
 }

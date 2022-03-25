@@ -22,7 +22,7 @@ const TableTemplate = (props) => {
     };
 
     return (
-        <div style={{overflow: "scroll", height: "90vh"}}>
+        <div style={{overflow: "scroll", height: "80vh"}}>
             <Table responsive="sm" striped bordered hover>
                 <thead>
                     <tr>
