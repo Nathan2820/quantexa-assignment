@@ -4,7 +4,7 @@ const mysql = require('mysql');
     mysql database connection information to connect to the mysql server
 */
 const con = mysql.createConnection({
-    host: "localhost",
+    host: "34.142.90.253", //"localhost",
     user: "root",
     password: "root",
     database: "quantexa"
